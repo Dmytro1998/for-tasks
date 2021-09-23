@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 50px;
+}
