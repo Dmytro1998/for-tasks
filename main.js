@@ -1,7 +1,6 @@
 
 
 
-let main = document.querySelector('.main')
 class CountdownTimer {
  static main = document.querySelector('.main');
    
@@ -11,15 +10,16 @@ class CountdownTimer {
        
     }
     addToTheDOM(){
+        
        
         let timers = document.createElement('div');
         timers.setAttribute('class', 'timer')
         
         timers.innerText = this.time
-        main.appendChild(timers);
+        CountdownTimer.main.appendChild(timers);
        let stopBtn = document.createElement('button')
        stopBtn.setAttribute('class', 'stopButton');
-       main.appendChild(stopBtn);
+       CountdownTimer.main.appendChild(stopBtn);
        stopBtn.textContent = "stop";
        stopBtn.addEventListener("click", timer.stop)
 
@@ -40,6 +40,11 @@ class CountdownTimer {
 
     }stop(){
         clearInterval(timerstart)
+        let stop = document.querySelector(".stopButton");
+        stop.innerHTML = "contine"
+       stop.setAttribute()
+
+
         
     }
 
@@ -50,21 +55,12 @@ class CountdownTimer {
 }
 
 
+ let timer = new CountdownTimer(35);
 
+let createNewTimer = document.getElementById('createNewTimer');
+createNewTimer.addEventListener('click',timer.addToTheDOM)
 
-
-
-
-
-
-let timer = new CountdownTimer(5);
-
-// let createBtn = document.querySelector(".createNewTimer");
-// createBtn.addEventListener('click', timer.addToTheDOM())
-
-timer.addToTheDOM();
-
-
+// timer.addToTheDOM();
 
 let timerstart = setInterval(function(){
 timer.start()
